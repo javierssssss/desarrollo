@@ -1,29 +1,73 @@
 <h1>Bienvenido !</h1>
-    <p>
+    <p id="contexto">
         Elegir la forma que desea calcular area y perimetro
     </p>
+<div id = 'contenedor'>
     <figure>
-        <img src="cuadrado.jpg" alt="Trulli" style="width:100%">
-        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+        <img 
+        id='forma'
+        (click)="pedirDatosFigura(0)"
+         src="assets/circulo.jpg" alt="Trulli" >
+   
       </figure>
 
       <figure>
-        <img src="circulo.jpg" alt="Trulli" style="width:100%">
-        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+        <img 
+        id='forma'     
+        (click)="pedirDatosFigura(1)"
+        src="assets/triangulo.jpg" alt="Trulli" >
+       
       </figure>
+
 
       <figure>
-        <img src="triangulo.jpg" alt="Trulli" style="width:100%">
-        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+        <img
+        id='forma'
+         src="assets/cuadrado.jpg" 
+         (click)="pedirDatosFigura(2)"
+         alt="Trulli" >
+
       </figure>
+
 
       <figure>
-        <img src="rectangulo.jpg" alt="Trulli" style="width:100%">
-        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+        <img id='forma'
+        src="assets/rectangulo.jpg" a
+        (click)="pedirDatosFigura(3)"
+        lt="Trulli" >
+    
       </figure>
+    </div>
 
-    <input
-    value = {{figura}}
-    >
+    <div
+    id="formulario">
+    <form>
+
+
+    <input    id="entrada"
+    contenteditable="false"
+    disabled
+    value = {{figura}}>
+    
+     
+    
+    
+    </form>
+    <!--  <input  id='botonSubmit' type='submit'> -->
+  
+
+</div>
+
+<app-form-datos 
+[opcion]="mensajeOpcion"
+[mostrarCirculo]="mostrar"
+[mostrarCuadrado]="mostrarC"
+[mostrarTriangulo]="mostrarT"
+[mostrarRectangulo]="mostrarR"
+
+>
+
+</app-form-datos>
+    
 
 

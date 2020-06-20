@@ -1,0 +1,229 @@
+<!---  Formulario Circulo -->
+<div id="contenForm"
+*ngIf= "mostrarCirculo"
+>
+<form>
+    <p>
+        Ingrese el radio  del círculo
+    </p>
+    <input 
+    #radio
+    id="radio"
+    min=1
+    value={{radioCir}}
+    type=number>
+    <button 
+    id="calcularRectangulo"
+    type='button'
+    (click)="circulo(radio.value)"
+    >
+        Calcular
+    </button>
+
+    <!--CAMPOS CALCUADOS AREA-->
+
+    <p *ngIf="calculadoC" >
+        Area:
+     
+    </p>
+    <input *ngIf="calculadoC"
+    #pm
+    id="radio"
+ disabled
+    value={{valorAreaC}}
+    type=number>
+    <!--    CAMPOS CALCULADOS PERIMETRO-->
+    <p *ngIf="calculadoC" >
+        Circunferencia:
+     
+    </p>
+    <input *ngIf="calculadoC"
+    #pm
+    id="radio"
+    disabled
+    value={{valorPerimetroC}}
+    type=number>
+
+</form>
+    
+</div>
+<!---  Formulario Triangulo -->
+<div  id="contenFormTri"
+*ngIf= "mostrarTriangulo"
+>
+<form>
+    <p>
+        Ingrese el lado 1  del triangulo
+    </p>
+
+    <input 
+    #lado1T
+    id="radio"
+    min=1
+    value={{ladoAT}}
+    type=number>
+
+    <p>
+        Ingrese el lado 2  del triangulo
+    </p>
+    <input 
+    #lado2T
+    id="radio"
+    min=1
+    value={{ladoBT}}
+    type=number>
+
+    <p>
+        Ingrese el lado 3  del triangulo
+    </p>
+    <input 
+    #lado3T
+    id="radio"
+    min=1
+    value={{ladoCT}}
+    type=number>
+    <button 
+    id="calcularRectangulo"
+    type='button'
+    (click)="triangulo(lado1T.value,lado2T.value,lado3T.value)"
+    >
+        Calcular
+    </button>
+    <!--CAMPOS CALCUADOS AREA-->
+
+    <p *ngIf="calculadoT" >
+        Area:
+     
+    </p>
+    <input *ngIf="calculadoT"
+    #pm
+    id="radio"
+ disabled
+    value={{valorAreaT}}
+    type=number>
+    <!--    CAMPOS CALCULADOS PERIMETRO-->
+    <p *ngIf="calculadoT" >
+        Perimetro:
+     
+    </p>
+    <input *ngIf="calculadoT"
+    #pm
+    id="radio"
+    disabled
+    value={{valorPerimetroT}}
+    type=number>
+
+</form>
+    
+</div>
+<!---  Formulario Cuadrado -->
+<div id="contenForm"
+*ngIf= "mostrarCuadrado"
+>
+<form>
+    <!--    -->
+    <p>
+        Ingrese el lado  del cuadrado
+    </p>
+    <input 
+    #ladoC
+    id="radio"
+    min=1
+    value={{ladoCD}}
+    type=number>
+
+    <button 
+    id="calcularRectangulo"
+    type='button'
+    (click)="cuadrado(ladoC.value)"
+ 
+    >
+        Calcular
+    </button>
+    <!--    CAMPOS CALCULADOS AREA-->
+    <p *ngIf="calculadoCD" >
+        Area:
+     
+    </p>
+    <input *ngIf="calculadoCD"
+    #pm
+    id="radio"
+ disabled
+    value={{valorAreaCD}}
+    type=number>
+
+    <p *ngIf="calculadoCD" >
+        Area:
+     
+    </p>
+    <input *ngIf="calculadoCD"
+    #pm
+    id="radio"
+ disabled
+    value={{valorPerimetroCD}}
+    type=number>
+
+</form>
+    
+</div>
+<!---  Formulario Rectangulo -->
+<div  id="contenForm"
+*ngIf= "mostrarRectangulo"
+>
+<form>
+    <p>
+        Ingrese el primer lado del rectangulo
+    </p>
+    <input 
+    #lado1
+    id="radio"
+    min=1
+    value={{lado1Rec}}
+    type=number>
+    
+    <!--    -->
+    <p>
+        Ingrese el segundo lado del rectangulo
+     
+    </p>
+    <input 
+    #lado2
+    id="radio"
+    min=1
+    value={{lado2Rec}}
+    type=number>
+
+    <button 
+    id="calcularRectangulo"
+    type='button'
+    (click)="rectangulo(lado2.value,lado1.value)"
+    >
+        Calcular
+    </button>
+    <!--    CAMPOS CALCULADOS AREA-->
+    <p *ngIf="calculado" >
+        Area:
+     
+    </p>
+    <input *ngIf="calculado"
+    #pm
+    id="radio"
+ disabled
+    value={{valorArea}}
+    type=number>
+    <!--    CAMPOS CALCULADOS PERIMETRO-->
+    <p *ngIf="calculado" >
+        Perimetro:
+     
+    </p>
+    <input *ngIf="calculado"
+    #pm
+    id="radio"
+    disabled
+    value={{valorPerimetro}}
+    type=number>
+
+
+</form>
+    
+</div>
